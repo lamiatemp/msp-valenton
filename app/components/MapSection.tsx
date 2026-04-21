@@ -17,7 +17,7 @@ const MapSection = () => {
                 <div>Bus - Ancienne Poste (lignes J2, O1, J1 et K)</div>
                 <div>Bus - Gabriel Péri (ligne K)</div>
                 <div className="font-bold mt-4 mb-1">Informations pratiques</div>
-                <div>1er étage avec ascenseur</div>
+                <div>2e étage avec ascenseur</div>
                 <div>Entrée accessible</div>
               </div>
               <a

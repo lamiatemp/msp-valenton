@@ -25,10 +25,17 @@ export function getTeamAxesFromExcel(): Axe[] {
       });
     }
     if (row[4]) {
+      let description = row[6] || "";
+      if (typeof description === 'string' && description.trim().toLowerCase().endsWith('.txt')) {
+        const txtPath = path.join(process.cwd(), 'public', description.trim());
+        if (fs.existsSync(txtPath)) {
+          description = fs.readFileSync(txtPath, 'utf-8');
+        }
+      }
       const subAxe: SubAxe = {
         id: row[4],
         title: row[5] || "",
-        description: row[6] || "",
+        description,
         photo: row[7] || undefined,
         link: row[8] || undefined,
       };

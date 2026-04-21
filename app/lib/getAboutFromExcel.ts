@@ -26,6 +26,15 @@ export function getAboutData(): AboutData {
 	let rawDescription = descIdx !== -1 ? row[descIdx] || '' : '';
 	const infoIdx = header.findIndex(h => h.toLowerCase() === 'info');
 	let rawInfo = infoIdx !== -1 ? row[infoIdx] || '' : '';
+
+	// If description refers to a .txt file, read its content
+	if (typeof rawDescription === 'string' && rawDescription.trim().toLowerCase().endsWith('.txt')) {
+		const txtPath = path.join(process.cwd(), 'public', rawDescription.trim());
+		if (fs.existsSync(txtPath)) {
+			rawDescription = fs.readFileSync(txtPath, 'utf-8');
+		}
+	}
+
 	// Replace newlines with <br /> and bullets with HTML entities for web display
 	rawDescription = rawDescription
 		.replace(/\r?\n/g, '<br />')

@@ -7,6 +7,7 @@ import { getTeamAxes } from "./components/teamAxesData";
 import NewsSection from "./components/NewsSection";
 import { getNewsFromExcel } from "./lib/getNewsFromExcel";
 import MapSection from "./components/MapSection";
+import SatisfactionSection from "./components/SatisfactionSection";
 import Footer from "./components/Footer";
 
 export default function Home() {
@@ -21,6 +22,7 @@ export default function Home() {
       <TeamSection axes={axes} />
       <NewsSection news={news} />
       <MapSection />
+      <SatisfactionSection />
       <Footer />
     </div>
   );

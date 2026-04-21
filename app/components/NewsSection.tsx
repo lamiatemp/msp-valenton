@@ -56,7 +56,7 @@ const NewsSection = ({ news }: NewsSectionProps) => {
             >
               {news.map((item, idx) => (
                 <a
-                  key={item.title}
+                  key={`${item.file}-${idx}`}
                   href={`/pdf/${item.file}`}
                   target="_blank"
                   rel="noopener noreferrer"

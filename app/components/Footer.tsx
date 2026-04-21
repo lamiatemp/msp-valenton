@@ -4,9 +4,9 @@ export default function Footer() {
       <div className="max-w-6xl mx-auto">
         <div className="grid md:grid-cols-2 gap-12 mb-12">
           <div>
-            <h3 className="text-2xl font-bold mb-4">La Maison de Santé</h3>
+            <h3 className="text-2xl font-bold mb-4">Maison de Santé de Valenton</h3>
             <p className="text-gray-300">
-              Une maison de santé pluriprofessionnelle dédiée à votre bien-être et à votre santé.
+              Une équipe pluriprofessionnelle exerçant de manière coordonnée autour d'un projet de santé commun pour vous assurer une prise en charge globale.
             </p>
           </div>
           <div className="md:col-start-2 md:col-end-3 md:justify-self-end w-full">
@@ -14,18 +14,7 @@ export default function Footer() {
             <ul className="space-y-2 text-gray-300 text-left">
               <li>📍 Place Paul Vaillant Couturier, 94460 Valenton</li>
               <li>📞 Téléphone à définir</li>
-              <li>
-                ⏰
-                <table className="text-left mt-2">
-                  <tbody>
-                    <tr><td>Lundi&nbsp;:</td><td className="pl-2">09h15 - 12h15, 13h15 - 16h00</td></tr>
-                    <tr><td>Mardi&nbsp;:</td><td className="pl-2">09h15 - 12h15, 13h15 - 16h00</td></tr>
-                    <tr><td>Mercredi&nbsp;:</td><td className="pl-2">09h15 - 12h15, 13h15 - 18h00</td></tr>
-                    <tr><td>Jeudi&nbsp;:</td><td className="pl-2">09h15 - 12h15, 13h15 - 16h00</td></tr>
-                    <tr><td>Vendredi&nbsp;:</td><td className="pl-2">09h15 - 12h15, 13h15 - 16h00</td></tr>
-                  </tbody>
-                </table>
-              </li>
+              <li>⏰ Lundi au vendredi : 9h00 - 19h00</li>
               </ul>
           </div>
         </div>

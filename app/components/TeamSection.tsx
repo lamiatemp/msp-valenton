@@ -48,7 +48,7 @@ export default function TeamSection({ axes }: TeamSectionProps) {
                 Notre équipe
               </h2>
               <p className="text-xl text-gray-700 max-w-3xl mx-auto">
-               Tous nos professionnels de santé et leurs canaux de prise de rendez-vous.
+               Tous les professionnels de santé de la Maison de Santé de Valenton
               </p>
             </div>
             <div className="relative">
@@ -115,7 +115,12 @@ export default function TeamSection({ axes }: TeamSectionProps) {
             {/* Modal for subaxe info */}
             {modalOpen && selectedSubAxe && (
               <div className="fixed inset-0 z-50 flex items-center justify-center" style={{ background: 'rgba(255,255,255,0.4)', backdropFilter: 'blur(4px)' }}>
-                <div className="bg-white rounded-lg shadow-lg p-8 max-w-xl w-full relative animate-fadeIn">
+                <div
+                  className={
+                    `bg-white rounded-lg shadow-lg p-8 w-full relative animate-fadeIn ` +
+                    (selectedSubAxe.subAxe.description && selectedSubAxe.subAxe.description.trim() !== '' ? 'max-w-3xl' : 'max-w-xl')
+                  }
+                >
                   <button
                     className="absolute top-2 right-2 text-gray-500 hover:text-gray-800 text-2xl font-bold"
                     onClick={closeModal}
@@ -123,14 +128,14 @@ export default function TeamSection({ axes }: TeamSectionProps) {
                   >
                     &times;
                   </button>
-                  <div className="flex flex-row items-stretch w-full h-full gap-6">
+                  <div className="flex flex-row items-center w-full h-full gap-6">
                     {selectedSubAxe.subAxe.photo && (
-                      <div className="flex-shrink-0 flex items-center h-full">
+                      <div className="flex-shrink-0 flex items-center justify-center h-full" style={{ minHeight: '320px' }}>
                         <img
                           src={selectedSubAxe.subAxe.photo}
                           alt={selectedSubAxe.subAxe.title}
                           className="object-cover rounded-lg border-2"
-                          style={{ borderColor: '#09a2d8', height: '320px', width: '220px', minWidth: '180px', maxHeight: '90vh' }}
+                          style={{ borderColor: '#09a2d8', height: '320px', width: '220px', minWidth: '180px', maxHeight: '90vh', display: 'block' }}
                         />
                       </div>
                     )}
