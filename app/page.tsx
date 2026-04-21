@@ -13,12 +13,12 @@ import Footer from "./components/Footer";
 export default function Home() {
   const axes = getTeamAxes();
   const news = getNewsFromExcel();
-  const about = getAboutData();
+  // const about = getAboutData();
   return (
     <div className="w-full bg-white">
       <Header />
       <HeroSection />
-      <AboutSection about={about} />
+      <AboutSection />
       <TeamSection axes={axes} />
       <NewsSection news={news} />
       <MapSection />
